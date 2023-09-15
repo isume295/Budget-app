@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @exchange %>
+
+<div>
+  <%= link_to "Edit this exchange", edit_exchange_path(@exchange) %> |
+  <%= link_to "Back to exchanges", exchanges_path %>
+
+  <%= button_to "Destroy this exchange", @exchange, method: :delete %>
+</div>
