@@ -1,5 +1,5 @@
 <div class="c-container">
-<%= form_with(model: category) do |form| %>
+<%= form_with(model: category, url: user_categories_path(current_user)) do |form| %>
   <% if category.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
@@ -14,7 +14,7 @@
 
   <div class="field-container">
   <div class="header">
-   <%= link_to "Back", user_category_path(@user), class: "btn" %>
+   <%= link_to "Back", user_categories_path(current_user), class: "btn" %>
   <h3 class="title">Add new Category</h3>
   <div>
      <%= form.submit "Add Category", class: "btn" %>

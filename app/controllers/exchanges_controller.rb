@@ -1,10 +1,10 @@
 class ExchangesController < ApplicationController
-  before_action :authenticate_user!, :set_exchange, only: %i[ show edit update destroy ]
+  before_action :authenticate_user! 
 
   # GET /exchanges or /exchanges.json
   def index
     # @exchanges = Exchange.all
-    @category = Category.find(params[:id])
+    @category = current_user.categories.find(params[:category_id])
     @exchanges = @category.exchanges.order(created_at: :desc)
   end
 
@@ -14,6 +14,7 @@ class ExchangesController < ApplicationController
 
   # GET /exchanges/new
   def new
+    @category = current_user.categories.find(params[:category_id])
     @categories = Category.where(user_id: current_user.id)
     @exchange = Exchange.new
   end
@@ -25,12 +26,13 @@ class ExchangesController < ApplicationController
   # POST /exchanges or /exchanges.json
   def create
     @exchange = current_user.exchanges.build(exchange_params)
-    # @category = Category.find(params[:id])
+    @category = current_user.categories.find(params[:category_id])
+ 
 
     if @exchange.save
       # Category successfully created
       flash[:notice] = 'Transaction created successfully.'
-      redirect_to  user_category_path(current_user)
+      redirect_to  user_category_exchanges_path(current_user, @category)
     else
       # Handle validation errors
       flash[:notice] = 'Transaction not created successfully.'

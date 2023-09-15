@@ -1,9 +1,9 @@
 class CategoriesController < ApplicationController
-  before_action :authenticate_user!, :set_category, only: %i[ show edit update destroy ]
+  before_action :authenticate_user! 
 
   # GET /categories or /categories.json
   def index
-    @categories = Category.where(user_id: params[:id])
+    @categories = Category.where(user_id: current_user.id)
     @exchanges_by_category = {}
 
     @categories.each do |category|
@@ -32,7 +32,7 @@ class CategoriesController < ApplicationController
         if @category.save
           # Category successfully created
           flash[:notice] = 'Category created successfully.'
-          redirect_to user_category_path(current_user)
+          redirect_to user_categories_path(current_user)
         else
           # Handle validation errors
           flash[:notice] = 'Category not created successfully.'

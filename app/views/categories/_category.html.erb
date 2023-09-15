@@ -3,7 +3,7 @@
  <div class="category">
  <div class="details">
  <img src="<%= category.icon %>" alt="icon" class="icon"/>
- <div class="c-name"><a href = "<%= category_exchanges_path(category) %>"><%= category.name %></a></div>
+ <div class="c-name"><a href = "<%= user_category_exchanges_path(current_user,category) %>"><%= category.name %></a></div>
  </div>
  <div class="transaction">Total amount: <%= total_amount %></div>
  </div>
