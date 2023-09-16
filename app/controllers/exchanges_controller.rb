@@ -1,5 +1,5 @@
 class ExchangesController < ApplicationController
-  before_action :authenticate_user! 
+  before_action :authenticate_user!
 
   # GET /exchanges or /exchanges.json
   def index
@@ -9,8 +9,7 @@ class ExchangesController < ApplicationController
   end
 
   # GET /exchanges/1 or /exchanges/1.json
-  def show
-  end
+  def show; end
 
   # GET /exchanges/new
   def new
@@ -20,19 +19,18 @@ class ExchangesController < ApplicationController
   end
 
   # GET /exchanges/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /exchanges or /exchanges.json
   def create
     @exchange = current_user.exchanges.build(exchange_params)
     @category = current_user.categories.find(params[:category_id])
- 
+
 
     if @exchange.save
       # Category successfully created
       flash[:notice] = 'Transaction created successfully.'
-      redirect_to  user_category_exchanges_path(current_user, @category)
+      redirect_to user_category_exchanges_path(current_user, @category)
     else
       # Handle validation errors
       flash[:notice] = 'Transaction not created successfully.'
@@ -44,7 +42,7 @@ class ExchangesController < ApplicationController
   def update
     respond_to do |format|
       if @exchange.update(exchange_params)
-        format.html { redirect_to exchange_url(@exchange), notice: "Exchange was successfully updated." }
+        format.html { redirect_to exchange_url(@exchange), notice: 'Exchange was successfully updated.' }
         format.json { render :show, status: :ok, location: @exchange }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -58,20 +56,21 @@ class ExchangesController < ApplicationController
     @exchange.destroy
 
     respond_to do |format|
-      format.html { redirect_to exchanges_url, notice: "Exchange was successfully destroyed." }
+      format.html { redirect_to exchanges_url, notice: 'Exchange was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_exchange
-      @exchange = Exchange.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
- 
-    def exchange_params
-      params.require(:exchange).permit(:name, :amount, category_ids: [])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_exchange
+    @exchange = Exchange.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+
+  def exchange_params
+    params.require(:exchange).permit(:name, :amount, category_ids: [])
+  end
 end

@@ -6,7 +6,7 @@ RSpec.describe 'Exchange index view page', type: :system do
   end
 
   let!(:category) do
-    Category.create(user_id: user.id, name: 'category1', icon: "https://images3.alphacoders.com/690/690494.jpg")
+    Category.create(user_id: user.id, name: 'category1', icon: 'https://images3.alphacoders.com/690/690494.jpg')
   end
 
   let!(:exchange) do
@@ -24,12 +24,11 @@ RSpec.describe 'Exchange index view page', type: :system do
     end
 
     it 'displays the user\'s category exchange name' do
-        expect(page).to have_content(exchange.name)
-      end
+      expect(page).to have_content(exchange.name)
+    end
 
-      it 'displays the user\'s category exchange amount' do
-        expect(page).to have_content(exchange.amount)
-      end
- 
+    it 'displays the user\'s category exchange amount' do
+      expect(page).to have_content(exchange.amount)
+    end
   end
 end

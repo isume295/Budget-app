@@ -6,7 +6,7 @@ RSpec.describe 'Category new view page', type: :system do
   end
 
   let!(:category) do
-    Category.create(user_id: user.id, name: 'category1', icon: "https://images3.alphacoders.com/690/690494.jpg")
+    Category.create(user_id: user.id, name: 'category1', icon: 'https://images3.alphacoders.com/690/690494.jpg')
   end
 
   describe 'show correct form for a user' do
@@ -19,12 +19,11 @@ RSpec.describe 'Category new view page', type: :system do
     end
 
     it 'displays the user\'s category' do
-        expect(page).to have_content(category.name)
-      end
+      expect(page).to have_content(category.name)
+    end
 
-      it 'displays the user\'s icon selector' do
-        expect(page).to have_selector('img[src="https://images3.alphacoders.com/690/690494.jpg"]')
-      end
- 
+    it 'displays the user\'s icon selector' do
+      expect(page).to have_selector('img[src="https://images3.alphacoders.com/690/690494.jpg"]')
+    end
   end
 end
