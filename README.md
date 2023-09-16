@@ -85,7 +85,7 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- [Live Demo Link](https://salimer.github.io/COMMENTDISH-project/dist/)
+- [Live Demo Link](https://budget-app-1n0j.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

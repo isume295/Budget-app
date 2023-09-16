@@ -26,7 +26,6 @@ class ExchangesController < ApplicationController
     @exchange = current_user.exchanges.build(exchange_params)
     @category = current_user.categories.find(params[:category_id])
 
-
     if @exchange.save
       # Category successfully created
       flash[:notice] = 'Transaction created successfully.'
