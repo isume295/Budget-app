@@ -1,0 +1,76 @@
+.c-container {
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(248, 249, 248);
+  font-family: 'Lato', sans-serif;
+  margin-bottom: 10px;
+}
+
+.c-c {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(248, 249, 248);
+  font-family: 'Lato', sans-serif;
+  justify-content: space-between;
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  padding-top: 20px;
+  font-family: 'Lato', sans-serif;
+}
+
+.category {
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 5px;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.c-name {
+  height: 95%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.icon {
+  width: 70px;
+  height: 70px;
+  background-color: red;
+}
+
+.new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  padding: 2% 0;
+}
+
+.new-data {
+  padding: 20px 35%;
+  border: rgb(248, 249, 248) solid 2px;
+  text-decoration: none;
+  color: white;
+}
+
+.total-amount {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

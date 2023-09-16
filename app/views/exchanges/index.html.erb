@@ -1,0 +1,24 @@
+<p style="color: green"><%= notice %></p>
+<div class="c-c">
+<div class="c-container">
+ <div class="header">
+  <%= link_to "Back", user_categories_path(current_user), class: "btn" %>
+  <h3 class="title">TRANSACTION</h3>
+  <div class="sign-out">
+  <%= link_to 'Sign Out', destroy_user_session_path, data: { turbo_method: :delete }, class: "btn" %>
+  </div>
+  </div>
+ 
+<div id="exchanges">
+<% total_amount = @exchanges.sum(&:amount) %>
+<div  class="total-amount"><h3>Total amount: $<%= total_amount %></h3></div>
+  <% @exchanges.each do |exchange| %>
+    <%= render exchange %>
+     
+  <% end %>
+</div>
+</div>
+<div class="new">
+<%= link_to "New Transaction", new_user_category_exchange_path(current_user, @category), class: "new-data" %>
+</div>
+</div>

@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:wght@300;400;700;900&display=swap');
+
+.splash-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75%;
+  width: 100%;
+  font-size: 46px;
+  font-weight: 400;
+  font-family: 'Great Vibes', cursive;
+}
+
+.link-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 19px 0;
+  width: 97%;
+  color: black;
+}
+
+.a {
+  text-decoration: none;
+  font-size: 20px;
+  font-family: 'Lato', sans-serif;
+  color: black;
+}
+
+.active {
+  background-color: #326db1;
+}
+
+.link:hover {
+  background-color: #326db1;
+  color: white;
+}
+
+.a:hover {
+  color: white;
+}
+
+.login-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9f8;
+}
+
+.field-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.4);
+  justify-content: center;
+  align-items: center;
+
+  /* gap: 10px; */
+}
+
+.field {
+  display: flex;
+  width: 100%;
+  background-color: #326db1;
+}
+
+.password-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  background-color: white;
+  border-top: 1px solid rgba(204, 204, 204, 0.4);
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-top: 1px solid rgba(204, 204, 204, 0.4);
+  font-size: 16px;
+  color: #333;
+  outline: none;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #326db1;
+  padding: 15px 12px;
+  color: white;
+  font-family: 'Lato', sans-serif;
+}
+
+.title {
+  font-size: 20px;
+}
+
+.btn {
+  text-decoration: none;
+  border: none;
+  background-color: #326db1;
+  color: white;
+  font-size: 16px;
+}
+
+.btn:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.shared {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  text-decoration: none;
+}
+
+.shared-link {
+  text-decoration: none;
+  color: rgb(196, 194, 194);
+}
+
+.shared-link:hover {
+  color: #333;
+}

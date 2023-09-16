@@ -1,0 +1,37 @@
+<div class="c-container">
+<%= form_with(model: exchange, url: user_category_exchanges_path(current_user, @category)) do |form| %>
+  <% if exchange.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(exchange.errors.count, "error") %> prohibited this exchange from being saved:</h2>
+
+      <ul>
+        <% exchange.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field-container">
+  <div class="header">
+    <%= link_to "Back", user_category_exchanges_path(current_user, @category), class: "btn" %>
+  <h3 class="title">Add new Transaction</h3>
+  <div>
+     <%= form.submit "Add Transaction", class: "btn" %>
+  </div>
+  </div>
+
+  <div class="field">
+  <%= form.text_field :name, autofocus: true, autocomplete: "name", class: "input", placeholder: "Name" %>
+  </div>
+
+  <div class="field">
+  <%= form.text_field :amount, autofocus: true, autocomplete: "Amount", class: "input", placeholder: "Amount" %>
+  </div>
+
+  <div class="field">
+  <%= form.collection_select :category_ids, @categories, :id, :name, { include_blank: "Select a category" }, { class: "input", multiple: true } %>
+  </div>
+   
+<% end %>
+</div>
