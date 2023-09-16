@@ -43,6 +43,10 @@
   color: black;
 }
 
+.active {
+  background-color: #326db1;
+}
+
 .link:hover {
   background-color: #326db1;
   color: white;
