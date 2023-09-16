@@ -25,6 +25,8 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+  - [🤯 Walk through video ](#walk-through)
+  - [🚀 Live Demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -43,7 +45,7 @@
 # 📖 [MyBudget-app ] <a name="about-project"></a>
 
 
-**MyBudget-app** is a simple application or platform designed to allows users to help individuals or households manage their finances by tracking expenses, and savings. These apps provide tools and features to create budgets, track spending, and analyze financial data. built with ROR (ruby with rails)
+**MyBudget-app** is a simple application or platform designed to allows individuals or households manage their finances by tracking expenses, and savings. These apps provide tools and features to create budgets, track spending, and analyze financial data. built with ROR (ruby with rails)
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -66,6 +68,24 @@
 
 - **Easy to the eyes and cultivating at the same time**
 - **Dynamic creation of content** 
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- WALKTHROUGH -->
+
+## 🤯 Walk through video <a name="walk-through"></a>
+
+
+- [here](https://www.loom.com/share/e6adbb08d0904cb9ae9034753afeed20)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+
+- [Live Demo Link](https://salimer.github.io/COMMENTDISH-project/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
