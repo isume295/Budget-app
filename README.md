@@ -76,7 +76,7 @@
 ## 🤯 Walk through video <a name="walk-through"></a>
 
 
-- [here](https://www.loom.com/share/e6adbb08d0904cb9ae9034753afeed20)
+- [here](https://www.loom.com/share/e6adbb08d0904cb9ae9034753afeed2000)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
